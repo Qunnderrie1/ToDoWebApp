@@ -64,7 +64,6 @@ function App() {
           </ul>
       </div>
 
-      <footer>Design & Develop by Qunnderrie Snelling &copy; {date.getFullYear()}</footer>
 
 
     </div>
