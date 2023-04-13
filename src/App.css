@@ -1,38 +1,184 @@
+body{
+  position: relative;
+  background-color: #14213d;
+  margin: 0px;
+  padding:0px;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
 .App {
-  text-align: center;
+  height: 1000px;
+  max-width: 400px;
+  text-align: left;
+  color: #14213d;
+  margin: 100px auto  0px auto;
+  padding:10px;
+  height: 600px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.userChoiceContainer{
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #14213d;
+  padding: 20px;
+
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App h1{
+  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App p{
+  font-weight: lighter;
+}
+
+
+.background{
+  width: 100%;
+  background-color: #ffc300;
+  height: 60vh;
+  position: absolute;
+  left: 0px;
+  top: -100px;
+  clip-path: polygon(0 0, 100% 0%, 100% 53%, 0% 100%);
+  z-index: -1;
+
+}
+.topContainer{
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #14213d;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.5);
+
+}
+
+.form-control{
+  border-radius: 2px;
+  width: 100%;
+}
+
+.topContainer p{
+text-align: left;
+font-weight: 600px;
+font-size: 16px;
+}
+
+.toDoItem{
+  color:rgb(0, 0, 0);
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  align-items: center;
+  font-size: 20px;
+  width: 100%;
+  background-color: #0a1128;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.5);
+
+ 
+}
+
+.bottomContainer{
+  overflow: scroll;
+  overflow-y:auto;
+  overflow-x: hidden;
+  height: 400px;
+}
+
+
+li{
+  list-style: none;
+}
+.todoContainer{
+  text-align: left;
+  color:white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 10px auto;
+  max-width: 400px;
+  gap: 10px;
+  padding:0px;
+
+  
+}
+
+.topContainer .btn{
+  background-color: #ffc300;
+}
+
+.todoContainer p{
   color: white;
+  padding: 5px;
+  margin: 0px;;
+}
+.bottomContainer{
+  z-index: 1;
+  border-radius: 4px;
+  margin: 100px auto;
+  max-width: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+.noText{
+  color: #0a1128;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.deleteBtn{
+  width: 100px;
+  height: fit-content;
+  padding:4px 0px;
+  font-size: 16px;
+  background-color: red;
+  color:white;
+  border: none;
+  border-radius: 4px;
+}
+
+
+.middleContainer{
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #14213d;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.5);
+}
+
+.middleContainer .dateText{
+  color: white;
+  padding: 10px;
+  margin: 0px;
+  font-weight: bold;
+
+}
+
+
+
+
+@media screen and (min-width: 568px) {
+  .bottomContainer{
+    overflow:visible;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
 }
