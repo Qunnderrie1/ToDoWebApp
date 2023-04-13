@@ -13,8 +13,12 @@ function App() {
 
 
   const handleToDos = () => {
-    setTodos([todo , ...todos]);
-    setTodo('')
+    if(todo == ''){
+      alert("Please enter in a value.")
+    }else{
+      setTodo('')
+      setTodos([todo , ...todos]);
+    }
 
   }
 
@@ -34,7 +38,7 @@ function App() {
       <p>what are you planning today?</p>
 
         <div className='topContainer  container'>
-          <input name="todos" className='form-control' value={todo} onChange={(e) => setTodo(e.target.value)} type='text' required placeholder="New Task" />
+          <input name="todos" className='form-control' value={todo} onChange={(e) => setTodo(e.target.value)} type='text' placeholder="New Task" />
           <button  onClick={handleToDos} type='submit' className='btn'>Add</button>
         </div>
 
@@ -42,11 +46,6 @@ function App() {
         <div className='middleContainer  container'>
           <p className='dateText'>{date.toDateString()}</p>
         </div>
-
-
-
-
-
 
       <div className='bottomContainer'>
           <ul className='todoContainer'>
@@ -64,6 +63,9 @@ function App() {
 
           </ul>
       </div>
+
+      <footer>Design & Develop by Qunnderrie Snelling &copy; {date.getFullYear()}</footer>
+
 
     </div>
   );

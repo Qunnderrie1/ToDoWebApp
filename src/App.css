@@ -8,13 +8,12 @@ body{
 }
 
 .App {
-  height: 1000px;
+  height: 500px;
   max-width: 400px;
   text-align: left;
   color: #14213d;
   margin: 100px auto  0px auto;
   padding:10px;
-  height: 600px;
 }
 
 .userChoiceContainer{
@@ -96,10 +95,8 @@ font-size: 16px;
 }
 
 .bottomContainer{
-  overflow: scroll;
-  overflow-y:auto;
-  overflow-x: hidden;
-  height: 400px;
+  height: 200px;
+  width: 100%;
 }
 
 
@@ -131,7 +128,7 @@ li{
 .bottomContainer{
   z-index: 1;
   border-radius: 4px;
-  margin: 100px auto;
+  margin: 100px auto 0px 0px;
   max-width: 400px;
 }
 
@@ -146,8 +143,7 @@ li{
   gap: 20px;
   background-color: #14213d;
   margin-top: 20px;
-  border-radius: 8px;
-  border: #ffc300 1px solid;
+  border-radius: 4px;
   box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.5);
 }
 
@@ -185,11 +181,20 @@ li{
 }
 
 
+footer{
+  color: white;
+  padding: 0px 0px 100px 0px;
+  margin-top: 50px;
+}
+
 
 
 @media screen and (min-width: 568px) {
   .bottomContainer{
-    overflow:visible;
+    overflow: scroll;
+    overflow-y:auto;
+    overflow-x: hidden;
+    height: 400px;
   }
   
 }
