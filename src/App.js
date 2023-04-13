@@ -14,9 +14,17 @@ function App() {
 
   const handleToDos = () => {
     setTodos([todo , ...todos]);
+    setTodo('')
 
   }
 
+  const handleDelete = (e) => {
+   const id = e.target.id;
+   const li = document.getElementById(id)
+   li.remove()
+
+
+  }
 
   return (
     <div className="App container-fluid">
@@ -45,9 +53,9 @@ function App() {
             {
               todos.length <= 0 ? <p className='noText' style={{ textAlign: "center" }}>No Task</p>
                 : todos.map((item , i) => {
-                  return <li key={i} id='item' className='toDoItem'>
+                  return <li key={i} id={i} className='toDoItem'>
                     <p>{item}</p>
-                    <button id={item} className='deleteBtn'>Remove</button>
+                    <button onClick={handleDelete} id={i} className='deleteBtn'>Remove</button>
                   </li>
                 })
 

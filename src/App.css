@@ -138,6 +138,17 @@ li{
 .noText{
   color: #0a1128;
   font-weight: bold;
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #14213d;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: #ffc300 1px solid;
+  box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.5);
 }
 
 .deleteBtn{
